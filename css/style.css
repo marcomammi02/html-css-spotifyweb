@@ -3,4 +3,33 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+
+/* upgrade section */
+.upgrade-section{
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.upgrade-btn{
+    text-align: right;
+    padding: 1.5rem 0.5rem 2rem 0;
+}
+
+.upgrade-btn a{
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.upgrade-btn a:hover{
+    transform: scale(1.1);
 }
