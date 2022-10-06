@@ -63,7 +63,7 @@
     display: none;
 }
 
-.pages-list img{
+.sidebar img{
     width: 40px;
 }
 
@@ -93,6 +93,10 @@
 .sidebar-low .download-btn{
     width: 18px;
     padding-bottom: 1rem;
+}
+
+.profile-btn-box h2{
+    display: none;
 }
 
 .sidebar-low .profile-btn{
@@ -224,6 +228,7 @@
     }
 
     .profile-btn-box h2{
+        display: block;
         color: #ffffff;
         margin-left: 1rem;
     }
