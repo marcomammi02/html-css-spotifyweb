@@ -7,13 +7,21 @@
 }
 
 
+/* general */
+h1{
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+
 /* upgrade section */
 .upgrade-section{
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .7);
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
+    z-index: 3;
 }
 
 .upgrade-btn{
@@ -41,6 +49,7 @@
     top: 0;
     left: 0;
     bottom: 87.6px;
+    z-index: 4;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -105,7 +114,7 @@
     clip-path: circle();
 }
 
-@media screen and (min-width: 553px) {
+@media screen and (min-width: 600px) {
     .sidebar .logo-small{
         display: none;
     }
@@ -242,6 +251,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 3;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -410,5 +420,136 @@
     .song-icons{
         flex-direction: row;
         justify-content: flex-start;
+    }
+}
+
+
+/* main */
+main{
+    background-color: #141922;
+    margin-left: 68px;
+    padding: 96px 1rem 87.6px;
+}
+
+.main-menu{
+    list-style-type: none;
+    color: #878787;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.main-menu li:first-child{
+    color: #ffffff;
+}
+
+.main-menu-underline-item{
+    border-bottom: 3px solid #64DB00;
+    border-width: 20%;
+}
+
+.main-menu li:hover{
+    color: #ffffff;
+}
+
+.recently-played-list,
+.created-for-list,
+.popular-artist-list{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+
+.card{
+    flex-basis: calc((100% - 1rem) /2);
+    text-align: center;
+}
+
+.card .img-box{
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+}
+
+.play-btn-overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.play-btn-overlay .fa-circle-play{
+    font-size: 4rem;
+}
+
+.card .img-box:hover .play-btn-overlay{
+    opacity: 1;
+}
+
+.card h2{
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.card p{
+    color: #878787;
+    font-weight: 600;
+}
+
+main h1{
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
+
+main .subtitle{
+    color: #878787;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.popular-artist-list .img-box{
+    clip-path: circle();
+}
+
+@media screen and (min-width: 600px) {
+    main{
+        margin-left: 220px;
+    }
+
+    .main-menu{
+        gap: 3rem;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .card{
+        flex-basis: calc((100% - 2rem) /3);
+    }
+}
+
+@media screen and (min-width: 878px) {
+    .card{
+        flex-basis: calc((100% - 3rem) /4);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .card{
+        flex-basis: calc((100% - 5rem) /6);
     }
 }
